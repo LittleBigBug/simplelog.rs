@@ -52,21 +52,21 @@ pub enum ThreadLogMode {
 /// Construct using `Default` or using `ConfigBuilder`
 #[derive(Debug, Clone)]
 pub struct Config {
-    pub(crate) time: LevelFilter,
-    pub(crate) level: LevelFilter,
-    pub(crate) level_padding: LevelPadding,
-    pub(crate) thread: LevelFilter,
-    pub(crate) thread_log_mode: ThreadLogMode,
-    pub(crate) thread_padding: ThreadPadding,
-    pub(crate) target: LevelFilter,
-    pub(crate) location: LevelFilter,
-    pub(crate) time_format: Cow<'static, str>,
-    pub(crate) time_offset: FixedOffset,
-    pub(crate) time_local: bool,
-    pub(crate) filter_allow: Cow<'static, [Cow<'static, str>]>,
-    pub(crate) filter_ignore: Cow<'static, [Cow<'static, str>]>,
+    pub time: LevelFilter,
+    pub level: LevelFilter,
+    pub level_padding: LevelPadding,
+    pub thread: LevelFilter,
+    pub thread_log_mode: ThreadLogMode,
+    pub thread_padding: ThreadPadding,
+    pub target: LevelFilter,
+    pub location: LevelFilter,
+    pub time_format: Cow<'static, str>,
+    pub time_offset: FixedOffset,
+    pub time_local: bool,
+    pub filter_allow: Cow<'static, [Cow<'static, str>]>,
+    pub filter_ignore: Cow<'static, [Cow<'static, str>]>,
     #[cfg(feature = "termcolor")]
-    pub(crate) level_color: [Option<Color>; 6],
+    pub level_color: [Option<Color>; 6],
 }
 
 /// Builder for the Logger Configurations (`Config`)
